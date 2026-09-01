@@ -16,7 +16,6 @@ body {
   padding: 2rem;
   font-weight: normal;
   width: 100dvw;
-  /* height:100dvh; */
   min-height: 100dvh;
 }
 
@@ -36,10 +35,11 @@ a,
 @media (max-width: 500px) {
   body {
     width: 100dvw;
+    overflow-x: hidden;
     margin: auto;
   }
   #app {
-    background-color: hsla(0, 0%, 95%, 1);
+    /* background-color: hsla(0, 0%, 95%, 1); */
     min-width: 300px;
     .repair-info {
       display: flex;
