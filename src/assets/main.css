@@ -1,12 +1,12 @@
-@import "tailwindcss";
-@import "@nuxt/ui";
+@import 'tailwindcss';
+@import '@nuxt/ui';
 @import './base.css';
-body{
+body {
   font-family: 'Inter', sans-serif;
   background-color: hsla(0, 0%, 100%, 1);
   color: hsla(0, 0%, 0%, 1);
-  width:80%;
-  margin:auto;
+  width: 80%;
+  margin: auto;
 }
 #app {
   min-width: 900px;
@@ -15,7 +15,7 @@ body{
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
-  width:100dvw;
+  width: 100dvw;
   /* height:100dvh; */
   min-height: 100dvh;
 }
@@ -33,27 +33,28 @@ a,
     background-color: hsla(160, 100%, 37%, 0.2);
   }
 }
-@media (max-width: 400px) {
-  body{
-    width:100dvw;
-    margin:auto;
+@media (max-width: 500px) {
+  body {
+    width: 100dvw;
+    margin: auto;
   }
   #app {
     background-color: hsla(0, 0%, 95%, 1);
-    .repair-info{
-      display:flex;
-      flex-direction: column;
-    }
-    .repair-header{
+    min-width: 300px;
+    .repair-info {
       display: flex;
       flex-direction: column;
-      width:calc(100dvw - 65px);
     }
-    .repair-list{
+    .repair-header {
       display: flex;
-      flex:1;
       flex-direction: column;
-         width:calc(100dvw - 65px);
+      width: calc(100dvw - 65px);
+    }
+    .repair-list {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      width: calc(100dvw - 65px);
     }
   }
 }
@@ -63,6 +64,4 @@ a,
     display: flex;
     place-items: center;
   }
-
-
 }
