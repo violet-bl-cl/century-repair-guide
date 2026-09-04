@@ -161,6 +161,10 @@ const props = defineProps<{
           >{{ device.repairGuide.repairType.motherboard.retailPrice }}
         </div>
       </div>
+      <div name="device-type">
+        <div class="flex-start text-sm">Deivce Type:</div>
+        <div class="flex-end test-sm">{{ device.repairGuide.deviceType.group }}</div>
+      </div>
       <!-- <div>Cost Price</div> -->
     </div>
   </div>
