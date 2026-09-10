@@ -1,13 +1,16 @@
+import type { DeviceGroup } from './deviceGroup'
+
 type DeviceType = {
   model: string
   year?: number
   brand: string
-  group: string
+  group: DeviceGroup
 }
 
 export type RepairDescription = {
   retailPrice: number
   costPrice?: number
+  partId?: string
   isPartAvailable: boolean
   isOriginal: boolean
   description: string

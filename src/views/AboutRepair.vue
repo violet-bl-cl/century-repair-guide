@@ -6,6 +6,8 @@ import type { DeviceModel } from '@/types/repairGuide'
 const props = defineProps<{
   devices: DeviceModel[]
 }>()
+
+const date = new Date()
 </script>
 <template>
   <div
@@ -65,8 +67,12 @@ const props = defineProps<{
       >
         <div class="flex-start text-sm">OLED Screen:</div>
         <div class="flex-end">
-          <span class="text-red-500 text-xs">CO$ </span
-          >{{ device.repairGuide.repairType.oledScreen.costPrice }}
+          <span class="text-red-500 text-xs">co-id: </span
+          >{{
+            device.repairGuide.repairType.oledScreen.partId
+              ? device.repairGuide.repairType.oledScreen.partId
+              : 'N/A'
+          }}
           <span class="text-gray-500 text-xs">NZD$ </span
           >{{ device.repairGuide.repairType.oledScreen.retailPrice }}
         </div>
@@ -80,8 +86,12 @@ const props = defineProps<{
       >
         <div class="flex-start text-sm">Battery:</div>
         <div class="flex-end">
-          <span class="text-red-500 text-xs">CO$ </span
-          >{{ device.repairGuide.repairType.battery.costPrice }}
+          <span class="text-red-500 text-xs">co-id: </span
+          >{{
+            device.repairGuide.repairType.battery.partId
+              ? device.repairGuide.repairType.battery.partId
+              : 'N/A'
+          }}
           <span class="text-gray-500 text-xs">NZD$ </span
           >{{ device.repairGuide.repairType.battery.retailPrice }}
         </div>
@@ -95,8 +105,14 @@ const props = defineProps<{
       >
         <div class="flex-start text-sm">Charging Port:</div>
         <div class="flex-end">
-          <span class="text-red-500 text-xs">CO$ </span
-          >{{ device.repairGuide.repairType.chargingPort.costPrice }}
+          <span class="text-red-500 text-xs">cn:</span>
+          <span class="text-xs">
+            {{
+              device.repairGuide.repairType.chargingPort.partId
+                ? device.repairGuide.repairType.chargingPort.partId
+                : `${date.getFullYear().toString().slice(-2)}${'132'}`
+            }}
+          </span>
           <span class="text-gray-500 text-xs">NZD$ </span
           >{{ device.repairGuide.repairType.chargingPort.retailPrice }}
         </div>

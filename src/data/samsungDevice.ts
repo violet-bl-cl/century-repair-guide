@@ -1,12 +1,16 @@
-import { createRepairDetail, emptyRepair } from "@/constants/repairDetail";
-import type { DeviceModel } from "@/types/repairGuide";
-
-export const samsungDevice:DeviceModel[] = [
-    // A3 / A300
+import { createRepairDetail, emptyRepair } from '@/constants/repairDetail'
+import { DeviceGroup } from '@/types/deviceGroup'
+import type { DeviceModel } from '@/types/repairGuide'
+export const samsungDevice: DeviceModel[] = [
+  // A3 / A300
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A3 / A300", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A3 / A300',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(0),
         battery: createRepairDetail(90),
@@ -21,11 +25,15 @@ export const samsungDevice:DeviceModel[] = [
   // A310
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A310", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A310',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(145),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -37,11 +45,15 @@ export const samsungDevice:DeviceModel[] = [
   // A320
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A320", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A320',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(155),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -53,11 +65,15 @@ export const samsungDevice:DeviceModel[] = [
   // A500
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A500", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A500',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(130),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -69,11 +85,15 @@ export const samsungDevice:DeviceModel[] = [
   // A510
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A510", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A510',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(145),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -85,11 +105,15 @@ export const samsungDevice:DeviceModel[] = [
   // A520
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A520", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A520',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(145),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -101,11 +125,15 @@ export const samsungDevice:DeviceModel[] = [
   // A720
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A720", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A720',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(140),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -117,11 +145,15 @@ export const samsungDevice:DeviceModel[] = [
   // A8 / A530
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A8 / A530", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A8 / A530',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(165),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -133,11 +165,15 @@ export const samsungDevice:DeviceModel[] = [
   // A8+ / A730
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A8+ / A730", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A8+ / A730',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(155),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -149,11 +185,15 @@ export const samsungDevice:DeviceModel[] = [
   // A10
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A10", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A10',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(118),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -165,11 +205,15 @@ export const samsungDevice:DeviceModel[] = [
   // A20 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A20 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A20 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(40),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -181,12 +225,16 @@ export const samsungDevice:DeviceModel[] = [
   // A30 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A30 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A30 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(140),
         oemScreen: createRepairDetail(175),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -198,11 +246,15 @@ export const samsungDevice:DeviceModel[] = [
   // A40
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A40", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A40',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(0),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -214,12 +266,16 @@ export const samsungDevice:DeviceModel[] = [
   // A50 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A50 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A50 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(140),
         oemScreen: createRepairDetail(175),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -231,12 +287,16 @@ export const samsungDevice:DeviceModel[] = [
   // A70 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A70 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A70 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(75),
         oemScreen: createRepairDetail(145),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -248,11 +308,15 @@ export const samsungDevice:DeviceModel[] = [
   // A80
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A80", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A80',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(240),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -264,11 +328,15 @@ export const samsungDevice:DeviceModel[] = [
   // A90 5G / A908
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A90 5G / A908", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A90 5G / A908',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(245),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -280,11 +348,15 @@ export const samsungDevice:DeviceModel[] = [
   // A01 wide/narrow connector
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A01 wide/narrow connector", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A01 wide/narrow connector',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -296,11 +368,15 @@ export const samsungDevice:DeviceModel[] = [
   // A11
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A11", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A11',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -312,11 +388,15 @@ export const samsungDevice:DeviceModel[] = [
   // A21S / A217
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A21S / A217", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A21S / A217',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -328,12 +408,16 @@ export const samsungDevice:DeviceModel[] = [
   // A31 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A31 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A31 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(143),
         oemScreen: createRepairDetail(210),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -345,13 +429,17 @@ export const samsungDevice:DeviceModel[] = [
   // A51 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A51 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A51 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: emptyRepair(),
         oledScreen: createRepairDetail(145),
         oemScreen: createRepairDetail(200),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -363,13 +451,17 @@ export const samsungDevice:DeviceModel[] = [
   // A715 / A71 4G with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A715 / A71 4G with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A715 / A71 4G with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: emptyRepair(),
         oledScreen: createRepairDetail(170),
         oemScreen: createRepairDetail(235),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -381,11 +473,15 @@ export const samsungDevice:DeviceModel[] = [
   // A326 / A32 5G
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A326 / A32 5G", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A326 / A32 5G',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(118),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -397,11 +493,15 @@ export const samsungDevice:DeviceModel[] = [
   // A03 Core / A032F
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A03 Core / A032F", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A03 Core / A032F',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -413,11 +513,15 @@ export const samsungDevice:DeviceModel[] = [
   // A02 / A125 / A127 / M02
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A02 / A125 / A127 / M02", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A02 / A125 / A127 / M02',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(118),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -429,12 +533,16 @@ export const samsungDevice:DeviceModel[] = [
   // A325 / A32 4G with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A325 / A32 4G with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A325 / A32 4G with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(145),
         oemScreen: createRepairDetail(210),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -446,12 +554,16 @@ export const samsungDevice:DeviceModel[] = [
   // A525 / A526 / A52S with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A525 / A526 / A52S with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A525 / A526 / A52S with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(160),
         oemScreen: createRepairDetail(215),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -463,12 +575,16 @@ export const samsungDevice:DeviceModel[] = [
   // A725 / A72
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A725 / A72", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A725 / A72',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(175),
         oemScreen: createRepairDetail(255),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -480,11 +596,15 @@ export const samsungDevice:DeviceModel[] = [
   // A01 Core / A013
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A01 Core / A013", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A01 Core / A013',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -496,11 +616,15 @@ export const samsungDevice:DeviceModel[] = [
   // A03S / A02S / A03
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A03S / A02S / A03", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A03S / A02S / A03',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(118),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -512,12 +636,16 @@ export const samsungDevice:DeviceModel[] = [
   // A22 4G / A225 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A22 4G / A225 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A22 4G / A225 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(140),
         oemScreen: createRepairDetail(190),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -529,11 +657,15 @@ export const samsungDevice:DeviceModel[] = [
   // A22 5G
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A22 5G", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A22 5G',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -545,11 +677,15 @@ export const samsungDevice:DeviceModel[] = [
   // M21 / M31
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "M21 / M31", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'M21 / M31',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(198),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -561,11 +697,15 @@ export const samsungDevice:DeviceModel[] = [
   // M30 / M30S
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "M30 / M30S", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'M30 / M30S',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(210),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -577,11 +717,15 @@ export const samsungDevice:DeviceModel[] = [
   // M51
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "M51", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'M51',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(240),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -593,11 +737,15 @@ export const samsungDevice:DeviceModel[] = [
   // M325
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "M325", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'M325',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(130),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -609,11 +757,15 @@ export const samsungDevice:DeviceModel[] = [
   // M34 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "M34 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'M34 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(240),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -625,11 +777,15 @@ export const samsungDevice:DeviceModel[] = [
   // A13 4G / A135 / A137
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A13 4G / A135 / A137", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A13 4G / A135 / A137',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -641,11 +797,15 @@ export const samsungDevice:DeviceModel[] = [
   // A13 5G / A136U/B
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A13 5G / A136U/B", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A13 5G / A136U/B',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -657,11 +817,15 @@ export const samsungDevice:DeviceModel[] = [
   // A23 4G / A235F
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A23 4G / A235F", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A23 4G / A235F',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -673,11 +837,15 @@ export const samsungDevice:DeviceModel[] = [
   // A23 5G / A236U/B
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A23 5G / A236U/B", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A23 5G / A236U/B',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -689,12 +857,16 @@ export const samsungDevice:DeviceModel[] = [
   // A33 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A33 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A33 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(155),
         oemScreen: createRepairDetail(240),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -706,12 +878,16 @@ export const samsungDevice:DeviceModel[] = [
   // A53 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A53 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A53 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(160),
         oemScreen: createRepairDetail(245),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -723,12 +899,16 @@ export const samsungDevice:DeviceModel[] = [
   // A73 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A73 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A73 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(160),
         oemScreen: createRepairDetail(210),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -740,11 +920,15 @@ export const samsungDevice:DeviceModel[] = [
   // M236
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "M236", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'M236',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -756,11 +940,15 @@ export const samsungDevice:DeviceModel[] = [
   // M336
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "M336", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'M336',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(123),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -772,11 +960,15 @@ export const samsungDevice:DeviceModel[] = [
   // A04 / A045F
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A04 / A045F", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A04 / A045F',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -788,11 +980,15 @@ export const samsungDevice:DeviceModel[] = [
   // A04e / A042
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A04e / A042", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A04e / A042',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -804,11 +1000,15 @@ export const samsungDevice:DeviceModel[] = [
   // A14 4G / A145F
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A14 4G / A145F", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A14 4G / A145F',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -820,11 +1020,15 @@ export const samsungDevice:DeviceModel[] = [
   // A14 5G / A146B / A146P
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A14 5G / A146B / A146P", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A14 5G / A146B / A146P',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -836,12 +1040,16 @@ export const samsungDevice:DeviceModel[] = [
   // A24 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A24 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A24 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(155),
         oemScreen: createRepairDetail(240),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -853,12 +1061,16 @@ export const samsungDevice:DeviceModel[] = [
   // A34 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A34 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A34 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(160),
         oemScreen: createRepairDetail(260),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -870,11 +1082,15 @@ export const samsungDevice:DeviceModel[] = [
   // A54 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A54 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A54 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(240),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -886,11 +1102,15 @@ export const samsungDevice:DeviceModel[] = [
   // A30S with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A30S with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A30S with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(140),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -902,11 +1122,15 @@ export const samsungDevice:DeviceModel[] = [
   // A04S / A047
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A04S / A047", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A04S / A047',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -918,11 +1142,15 @@ export const samsungDevice:DeviceModel[] = [
   // A05
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A05", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A05',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -934,11 +1162,15 @@ export const samsungDevice:DeviceModel[] = [
   // A05S
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A05S", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A05S',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -950,11 +1182,15 @@ export const samsungDevice:DeviceModel[] = [
   // A50S with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A50S with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A50S with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(140),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -966,11 +1202,15 @@ export const samsungDevice:DeviceModel[] = [
   // A20S / A207
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A20S / A207", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A20S / A207',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -982,12 +1222,16 @@ export const samsungDevice:DeviceModel[] = [
   // A15 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A15 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A15 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(155),
         oemScreen: createRepairDetail(210),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -999,12 +1243,16 @@ export const samsungDevice:DeviceModel[] = [
   // A25 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A25 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A25 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oledScreen: createRepairDetail(55),
         oemScreen: createRepairDetail(130),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -1016,11 +1264,15 @@ export const samsungDevice:DeviceModel[] = [
   // A35 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A35 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A35 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(235),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -1032,11 +1284,15 @@ export const samsungDevice:DeviceModel[] = [
   // A55 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A55 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A55 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(260),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -1048,11 +1304,15 @@ export const samsungDevice:DeviceModel[] = [
   // A06
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A06", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A06',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         lcdScreen: createRepairDetail(120),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -1064,11 +1324,15 @@ export const samsungDevice:DeviceModel[] = [
   // A165 4G / A166 5G without frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A165 4G / A166 5G without frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A165 4G / A166 5G without frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(215),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -1080,11 +1344,15 @@ export const samsungDevice:DeviceModel[] = [
   // A26 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A26 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A26 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(205),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -1096,11 +1364,15 @@ export const samsungDevice:DeviceModel[] = [
   // A36 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A36 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A36 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(245),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
@@ -1112,11 +1384,15 @@ export const samsungDevice:DeviceModel[] = [
   // A56 with frame
   {
     repairGuide: {
-      serviceCountry: "nz",
-      deviceType: { model: "A56 with frame", brand: "Samsung" },
+      serviceCountry: 'nz',
+      deviceType: {
+        model: 'A56 with frame',
+        brand: 'Samsung',
+        group: DeviceGroup.None,
+      },
       repairType: {
         oemScreen: createRepairDetail(260),
-        battery:  createRepairDetail(90),
+        battery: createRepairDetail(90),
         chargingPort: emptyRepair(),
         frontCamera: emptyRepair(),
         backCamera: emptyRepair(),
