@@ -8,6 +8,7 @@ type DeviceType = {
 }
 
 export type RepairDescription = {
+  quantity?: number
   retailPrice: number
   costPrice?: number
   partId?: string

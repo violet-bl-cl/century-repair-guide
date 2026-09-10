@@ -14,6 +14,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppleIcon: typeof import('./src/components/icons/AppleIcon.vue')['default']
     OppoIcon: typeof import('./src/components/icons/OppoIcon.vue')['default']
+    PriceList: typeof import('./src/components/PriceList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SamsungIcon: typeof import('./src/components/icons/SamsungIcon.vue')['default']
@@ -24,6 +25,7 @@ declare module 'vue' {
 declare global {
   const AppleIcon: typeof import('./src/components/icons/AppleIcon.vue')['default']
   const OppoIcon: typeof import('./src/components/icons/OppoIcon.vue')['default']
+  const PriceList: typeof import('./src/components/PriceList.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
   const SamsungIcon: typeof import('./src/components/icons/SamsungIcon.vue')['default']

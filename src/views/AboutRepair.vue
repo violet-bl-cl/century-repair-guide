@@ -1,248 +1,159 @@
 <script lang="ts" setup>
-import AppleIcon from '@/components/icons/AppleIcon.vue'
-import SamsungIcon from '@/components/icons/SamsungIcon.vue'
-import { DeviceGroup } from '@/types/deviceGroup'
+import { appleDevice } from '@/data/appleDevice'
+import { oppoDevice } from '@/data/oppoDevice'
+import { samsungDevice } from '@/data/samsungDevice'
 import type { DeviceModel } from '@/types/repairGuide'
-// const allDevices = ref<DeviceModel[]>([...appleDevice, ...samsungDevice]);
-const props = defineProps<{
-  devices: DeviceModel[]
-}>()
+import { computed, ref } from 'vue'
+import AppleIcon from './../components/icons/AppleIcon.vue'
+import PriceList from './../components/PriceList.vue'
+const allDevices = ref<DeviceModel[]>([...appleDevice, ...samsungDevice, ...oppoDevice])
+const searchKeyword = ref('')
 
-const date = new Date()
+const filteredDevices = computed(() => {
+  const keyword = searchKeyword.value.trim().toLowerCase()
+
+  let devices = allDevices.value
+  if (tabIndex.value === 1) {
+    devices = devices.filter((d) => d.repairGuide.deviceType.brand === 'Apple')
+  } else if (tabIndex.value === 2) {
+    devices = devices.filter((d) => d.repairGuide.deviceType.brand === 'Samsung')
+  } else if (tabIndex.value === 3) {
+    devices = devices.filter((d) => d.repairGuide.deviceType.brand === 'Oppo')
+  }
+
+  if (!keyword) return devices
+  return allDevices.value.filter((device) =>
+    device.repairGuide.deviceType.model.toLowerCase().includes(keyword),
+  )
+})
+//tab index for models
+const tabIndex = ref(0)
+
+const setTabIndex = (value: number) => {
+  tabIndex.value = value
+}
 </script>
 <template>
-  <div
-    v-for="device in props.devices"
-    class="mx-px-4 my-4 p-4 shadow-md"
-    :key="device.repairGuide.deviceType.model"
-  >
-    <div>Device Information</div>
-    <div class="flex justify-between">
-      <div class="flex-start">
-        <div>
-          <span class="text-xs">Model: </span
-          ><span class="text-xs">
-            {{ device.repairGuide.deviceType.model }}
-          </span>
-        </div>
-        <div>
-          <span class="flex-start text-xs">Device Type:</span>
-          <span class="flex-end text-xs">{{
-            DeviceGroup[device.repairGuide.deviceType.group]
-          }}</span>
-        </div>
-      </div>
-
-      <div class="flex-end">
-        <div v-if="device.repairGuide.deviceType.brand === 'Apple'"><AppleIcon /></div>
-        <div v-else-if="device.repairGuide.deviceType.brand === 'Samsung'"><SamsungIcon /></div>
-        <div v-else><OppoIcon /></div>
-      </div>
+  <div class="flex repair-info text-xs border-b-1 bg-[#000000] text-white">
+    <div class="pl-2 pt-5 pr-2 bg-[#ffffff] text-black rounded-tr-sm text-sm cursor-pointer">
+      21st Century
     </div>
-    <!-- <div>Region: {{ device.repairGuide.serviceCountry }}</div> -->
-    <div class="font-bold">Client Price | Sale Price</div>
+    <div class="pl-2 pt-5 pr-2 text-sm cursor-pointer">NZSunnyWay</div>
+  </div>
+  <div class="flex justify-between top-0 z-10 bg-white p-2 sticky repair-header">
     <div>
-      <div
-        v-if="
-          device.repairGuide.repairType.lcdScreen &&
-          device.repairGuide.repairType.lcdScreen.retailPrice !== 0
-        "
-        class="flex justify-between"
-      >
-        <div class="flex-start text-xs">LCD Screen:</div>
-        <div class="flex-end">
-          <span class="text-red-500 text-xs">CN:</span>
-          <span class="text-xs">
-            {{
-              device.repairGuide.repairType.lcdScreen.partId
-                ? device.repairGuide.repairType.lcdScreen.partId
-                : `${date.getFullYear().toString().slice(-2)}${'132'}`
-            }}</span
-          >
-          <span class="text-gray-500 text-xs"> NZD </span>${{
-            device.repairGuide.repairType.lcdScreen.retailPrice
-          }}
-        </div>
-      </div>
-      <div
-        v-if="
-          device.repairGuide.repairType.oemScreen &&
-          device.repairGuide.repairType.oemScreen.retailPrice !== 0
-        "
-        class="flex justify-between"
-      >
-        <div class="flex-start text-xs">OEM Screen:</div>
-        <div class="flex-end">
-          <span class="text-red-500 text-xs">CN:</span>
-          <span class="text-xs">
-            {{
-              device.repairGuide.repairType.oemScreen.partId
-                ? device.repairGuide.repairType.oemScreen.partId
-                : `${date.getFullYear().toString().slice(-2)}${'132'}`
-            }}</span
-          >
-          <span class="text-gray-500 text-xs"> NZD </span>${{
-            device.repairGuide.repairType.oemScreen.retailPrice
-          }}
-        </div>
-      </div>
-      <div
-        v-if="
-          device.repairGuide.repairType.oledScreen &&
-          device.repairGuide.repairType.oledScreen.retailPrice !== 0
-        "
-        class="flex justify-between"
-      >
-        <div class="flex-start text-xs">OLED Screen:</div>
-        <div class="flex-end">
-          <span class="text-red-500 text-xs">CN:</span>
-          <span class="text-xs">
-            {{
-              device.repairGuide.repairType.oledScreen.partId
-                ? device.repairGuide.repairType.oledScreen.partId
-                : `${date.getFullYear().toString().slice(-2)}${'132'}`
-            }}
-          </span>
-          <span class="text-gray-500 text-xs"> NZD </span>${{
-            device.repairGuide.repairType.oledScreen.retailPrice
-          }}
-        </div>
-      </div>
-      <div
-        v-if="
-          device.repairGuide.repairType.battery &&
-          device.repairGuide.repairType.battery.retailPrice !== 0
-        "
-        class="flex justify-between"
-      >
-        <div class="flex-start text-xs">Battery:</div>
-        <div class="flex-end">
-          <span class="text-red-500 text-xs">CN:</span>
-          <span class="text-xs">
-            {{
-              device.repairGuide.repairType.battery.partId
-                ? device.repairGuide.repairType.battery.partId
-                : `${date.getFullYear().toString().slice(-2)}${'132'}`
-            }}
-          </span>
-          <span class="text-gray-500 text-xs"> NZD </span>${{
-            device.repairGuide.repairType.battery.retailPrice
-          }}
-        </div>
-      </div>
-      <div
-        v-if="
-          device.repairGuide.repairType.chargingPort &&
-          device.repairGuide.repairType.chargingPort.retailPrice !== 0
-        "
-        class="flex justify-between"
-      >
-        <div class="flex-start text-xs">Charging Port:</div>
-        <div class="flex-end">
-          <span class="text-red-500 text-xs">CN:</span>
-          <span class="text-xs">
-            {{
-              device.repairGuide.repairType.chargingPort.partId
-                ? device.repairGuide.repairType.chargingPort.partId
-                : `${date.getFullYear().toString().slice(-2)}${'132'}`
-            }}
-          </span>
-          <span class="text-gray-500 text-xs"> NZD </span>${{
-            device.repairGuide.repairType.chargingPort.retailPrice
-          }}
-        </div>
-      </div>
-      <div
-        v-if="
-          device.repairGuide.repairType.frontCamera &&
-          device.repairGuide.repairType.frontCamera.retailPrice !== 0
-        "
-        class="flex justify-between"
-      >
-        <div class="flex-start text-xs">Front Camera:</div>
-        <div class="flex-end">
-          <span class="text-red-500 text-xs">CN:</span>
-          <span class="text-xs">
-            {{
-              device.repairGuide.repairType.frontCamera.partId
-                ? device.repairGuide.repairType.frontCamera.partId
-                : `${date.getFullYear().toString().slice(-2)}${'132'}`
-            }}
-          </span>
-          <span class="text-xs"> NZD </span>${{
-            device.repairGuide.repairType.frontCamera.retailPrice
-          }}
-        </div>
-      </div>
-      <div
-        v-if="
-          device.repairGuide.repairType.backCamera &&
-          device.repairGuide.repairType.backCamera.retailPrice !== 0
-        "
-        class="flex justify-between"
-      >
-        <div class="flex-start text-xs">Back Camera:</div>
-        <div class="flex-end">
-          <span class="text-red-500 text-xs">CN:</span>
-          <span class="text-gray-500 text-xs">
-            {{
-              device.repairGuide.repairType.backCamera.partId
-                ? device.repairGuide.repairType.backCamera.partId
-                : `${date.getFullYear().toString().slice(-2)}${'132'}`
-            }}
-          </span>
-          <span class="text-gray-500 text-xs"> NZD </span>${{
-            device.repairGuide.repairType.backCamera.retailPrice
-          }}
-        </div>
-      </div>
-      <div
-        v-if="
-          device.repairGuide.repairType.backGlass &&
-          device.repairGuide.repairType.backGlass.retailPrice !== 0
-        "
-        class="flex justify-between"
-      >
-        <div class="flex-start text-xs">Back Glass:</div>
-        <div class="flex-end">
-          <span class="text-red-500 text-xs">CN:</span>
-          <span class="text-gray-500 text-xs">
-            {{
-              device.repairGuide.repairType.backGlass.partId
-                ? device.repairGuide.repairType.backGlass.partId
-                : `${date.getFullYear().toString().slice(-2)}${'132'}`
-            }}
-          </span>
-          <span class="text-gray-500 text-xs"> NZD </span>${{
-            device.repairGuide.repairType.backGlass.retailPrice
-          }}
-        </div>
-      </div>
-      <div
-        v-if="
-          device.repairGuide.repairType.motherboard &&
-          device.repairGuide.repairType.motherboard.retailPrice !== 0
-        "
-        class="flex justify-between"
-      >
-        <div class="flex-start text-xs">Motherboard:</div>
-        <div class="flex-end">
-          <span class="text-red-500 text-xs">CN:</span>
-          <span class="text-gray-500 text-xs">
-            {{
-              device.repairGuide.repairType.motherboard.partId
-                ? device.repairGuide.repairType.motherboard.partId
-                : `${date.getFullYear().toString().slice(-2)}${'132'}`
-            }}
-          </span>
-          <span class="text-gray-500 text-xs">NZD </span>${{
-            device.repairGuide.repairType.motherboard.retailPrice
-          }}
-        </div>
-      </div>
-      <!-- <div>Cost Price</div> -->
+      <input
+        v-model="searchKeyword"
+        type="text"
+        placeholder="Search model: iPhone x..."
+        class="flex flex-start p-2 mb-4"
+      />
     </div>
+    <div class="flex-end flex gap-0.5">
+      <div
+        :style="{ backgroundColor: tabIndex === 0 ? '#4c4c4c' : '#ffffff' }"
+        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center items-center cursor-pointer select-none"
+        @click="setTabIndex(0)"
+      >
+        All
+      </div>
+      <div
+        :style="{ backgroundColor: tabIndex === 1 ? '#4c4c4c' : '#ffffff' }"
+        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center items-center cursor-pointer select-none"
+        @click="setTabIndex(1)"
+      >
+        <AppleIcon />
+      </div>
+      <div
+        :style="{ backgroundColor: tabIndex === 2 ? '#4c4c4c' : '#ffffff' }"
+        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center items-center cursor-pointer select-none"
+        @click="setTabIndex(2)"
+      >
+        <SamsungIcon />
+      </div>
+      <div
+        :style="{ backgroundColor: tabIndex === 3 ? '#4c4c4c' : '#ffffff' }"
+        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center items-center cursor-pointer select-none"
+        @click="setTabIndex(3)"
+      >
+        <OppoIcon />
+      </div>
+    </div>
+    <div name="find-my-imei" class="pl-2">
+      <input
+        v-model="searchKeyword"
+        type="text"
+        placeholder="Enter IMEI or SN..."
+        class="flex flex-start p-2 mb-4"
+      />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-3 gap-4 justify-center min-width-[1000px] repair-list">
+    <PriceList :devices="filteredDevices" />
   </div>
 </template>
 
-<style></style>
+<style scoped>
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+}
+</style>
