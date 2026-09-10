@@ -14,17 +14,9 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 2rem;
-  font-weight: normal;
+  /* font-weight: normal; */
   width: 100dvw;
   min-height: 100dvh;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
 }
 
 @media (hover: hover) {

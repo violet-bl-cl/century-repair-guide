@@ -20,8 +20,8 @@ export default defineConfig({
         // 'favicon.png', 'icons/apple-touch-icon.png'
       ],
       manifest: {
-        name: '21st century repair guide',
-        short_name: '21st century repair guide',
+        name: 'Repair Price for 21st Century',
+        short_name: 'Repair Price Guide',
         description: 'A repair guide for 21st century devices',
         theme_color: '#ffffff',
         background_color: '#ffffff',
