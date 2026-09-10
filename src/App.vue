@@ -35,14 +35,19 @@ const setTabIndex = (value: number) => {
 </script>
 
 <template>
-  <div class="flex justify-center repair-info text-xs">21st Century Electronics Repair Price</div>
+  <div class="flex repair-info text-xs border-b-1 bg-[#000000] text-white">
+    <div class="pl-2 pt-5 pr-2 bg-[#ffffff] text-black rounded-tr-sm text-sm cursor-pointer">
+      21st Century
+    </div>
+    <div class="pl-2 pt-5 pr-2 text-sm cursor-pointer">NZSunnyWay</div>
+  </div>
   <div class="flex justify-between top-0 z-10 bg-white p-2 sticky repair-header">
     <div>
       <input
         v-model="searchKeyword"
         type="text"
-        placeholder="Search devices..."
-        class="flex flex-start border rounded-lg p-2 mb-4"
+        placeholder="Search model: iPhone x..."
+        class="flex flex-start p-2 mb-4"
       />
     </div>
     <div class="flex-end flex gap-0.5">
