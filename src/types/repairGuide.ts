@@ -17,7 +17,7 @@ export type RepairDescription = {
   description: string
 }
 
-type RepairType = {
+export type RepairType = {
   lcdScreen?: RepairDescription
   oemScreen?: RepairDescription
   oledScreen?: RepairDescription

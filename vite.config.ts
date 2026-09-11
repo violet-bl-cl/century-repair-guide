@@ -1,6 +1,7 @@
 import { fileURLToPath, URL } from 'node:url'
 
 import nuxt from '@nuxt/ui/vite'
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vite'
@@ -11,6 +12,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
     nuxt(),
+    tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
       devOptions: {
