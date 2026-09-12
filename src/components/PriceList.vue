@@ -84,7 +84,7 @@ const date = new Date()
                 {{
                   value?.partId
                     ? value.partId
-                    : `${date.getFullYear().toString().slice(-2)}${'O132'}MI60MX80`
+                    : `${date.getFullYear().toString().slice(-2)}-${value?.retailPrice}-${value!.retailPrice - 20}-${value!.retailPrice}`
                 }}</span
               ></span
             >
@@ -109,7 +109,9 @@ const date = new Date()
                 :style="{ color: 'red', width: 10, height: 10, margin: 'auto !important' }"
             /></span>
             NZD </span
-          ><span v-if="value?.retailPrice" class="extra-light">${{ value.retailPrice }}</span>
+          ><span v-if="value?.retailPrice" class="extra-light inline-block w-[35px]"
+            >${{ value.retailPrice }}</span
+          >
         </div>
       </div>
     </div>
