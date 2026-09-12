@@ -13,6 +13,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AppleIcon: typeof import('./src/components/icons/AppleIcon.vue')['default']
+    CenturyIcon: typeof import('./src/components/icons/CenturyIcon.vue')['default']
     OppoIcon: typeof import('./src/components/icons/OppoIcon.vue')['default']
     PriceList: typeof import('./src/components/PriceList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -24,6 +25,7 @@ declare module 'vue' {
 // For TSX support
 declare global {
   const AppleIcon: typeof import('./src/components/icons/AppleIcon.vue')['default']
+  const CenturyIcon: typeof import('./src/components/icons/CenturyIcon.vue')['default']
   const OppoIcon: typeof import('./src/components/icons/OppoIcon.vue')['default']
   const PriceList: typeof import('./src/components/PriceList.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']

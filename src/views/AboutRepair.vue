@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { getPrice, type PriceResult } from '@/api/partPriceApi.ts'
+import { getPrice, getPrices, type PriceResult } from '@/api/partPriceApi.ts'
 import { appleDevice } from '@/data/appleDevice'
 import { oppoDevice } from '@/data/oppoDevice'
 import { samsungDevice } from '@/data/samsungDevice'
@@ -35,8 +35,16 @@ const setTabIndex = (value: number) => {
   tabIndex.value = value
 }
 
+const pageIndex = ref(0)
+const setPageIndex = (value: number) => {
+  pageIndex.value = value
+}
+
 //get api here
 // --- Single lookup ---
+const secondUrl = ref(
+  'https://nzsunnyway.co.nz/product/original-lcd-screen-for-samsung-galaxy-s25-ultra-sm-s938-with-black-frame-a-grade/',
+)
 const singleUrl = ref('https://nzsunnyway.co.nz/product/lcd-screen-samsung-a30s/')
 const singleLoading = ref(false)
 const singleError = ref<string | null>(null)
@@ -48,77 +56,123 @@ async function handleSingleLookup() {
   singleResult.value = null
 
   try {
-    singleResult.value = await getPrice(singleUrl.value)
+    singleResult.value = await getPrice(secondUrl.value)
   } catch (e: any) {
     singleError.value = e.response?.data?.message || e.message
   } finally {
     singleLoading.value = false
   }
 }
+
+// --- Bulk lookup ---
+const bulkUrls = ref([
+  'https://nzsunnyway.co.nz/product/lcd-screen-samsung-a30s/',
+  'https://nzsunnyway.co.nz/product/lcd-screen-samsung-a50/',
+])
+const bulkLoading = ref(false)
+const bulkError = ref<string | null>(null)
+const bulkResults = ref<PriceResult[]>([])
+
+async function handleBulkLookup() {
+  bulkLoading.value = true
+  bulkError.value = null
+  bulkResults.value = []
+
+  try {
+    bulkResults.value = await getPrices(bulkUrls.value)
+  } catch (e: any) {
+    bulkError.value = e.response?.data?.message || e.message
+  } finally {
+    bulkLoading.value = false
+  }
+}
+
 onMounted(() => {
   handleSingleLookup()
+  handleBulkLookup()
 })
 </script>
 <template>
-  <div class="flex repair-info text-xs border-b-1 bg-[#000000] text-white">
-    <div class="pl-2 pt-5 pr-2 bg-[#ffffff] text-black rounded-tr-sm text-sm cursor-pointer">
-      21st Century
-    </div>
-    <div class="pl-2 pt-5 pr-2 text-sm cursor-pointer">NZSunnyWay</div>
-  </div>
-  <div class="flex justify-between top-0 z-10 bg-white p-2 sticky repair-header">
-    <div>
-      <input
-        v-model="searchKeyword"
-        type="text"
-        placeholder="Search model: iPhone x..."
-        class="flex flex-start p-2 mb-4"
-      />
-    </div>
-    <div class="flex-end flex gap-0.5">
-      <div
-        :style="{ backgroundColor: tabIndex === 0 ? '#b3b3b3' : '#ffffff' }"
-        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
-        @click="setTabIndex(0)"
-      >
-        <TabletSmartphone :style="{ color: 'black' }" />
+  <div class="flex flex-col sticky repair-header top-0 z-10 w-[100%]">
+    <div class="flex justify-between top-0 z-10 bg-white p-2 repair-header">
+      <div>
+        <input
+          v-model="searchKeyword"
+          type="text"
+          placeholder="Search model: iPhone x..."
+          class="flex flex-start p-2 mb-4"
+        />
       </div>
-      <div
-        :style="{ backgroundColor: tabIndex === 1 ? '#b3b3b3' : '#ffffff' }"
-        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
-        @click="setTabIndex(1)"
-      >
-        <AppleIcon />
+      <div class="flex-end flex gap-0.5">
+        <div
+          :style="{ backgroundColor: tabIndex === 0 ? '#b3b3b3' : '#ffffff' }"
+          class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
+          @click="setTabIndex(0)"
+        >
+          <TabletSmartphone :style="{ color: 'black' }" />
+        </div>
+        <div
+          :style="{ backgroundColor: tabIndex === 1 ? '#b3b3b3' : '#ffffff' }"
+          class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
+          @click="setTabIndex(1)"
+        >
+          <AppleIcon />
+        </div>
+        <div
+          :style="{ backgroundColor: tabIndex === 2 ? '#b3b3b3' : '#ffffff' }"
+          class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
+          @click="setTabIndex(2)"
+        >
+          <SamsungIcon />
+        </div>
+        <div
+          :style="{ backgroundColor: tabIndex === 3 ? '#b3b3b3' : '#ffffff' }"
+          class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
+          @click="setTabIndex(3)"
+        >
+          <OppoIcon />
+        </div>
       </div>
-      <div
-        :style="{ backgroundColor: tabIndex === 2 ? '#b3b3b3' : '#ffffff' }"
-        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
-        @click="setTabIndex(2)"
-      >
-        <SamsungIcon />
-      </div>
-      <div
-        :style="{ backgroundColor: tabIndex === 3 ? '#b3b3b3' : '#ffffff' }"
-        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
-        @click="setTabIndex(3)"
-      >
-        <OppoIcon />
-      </div>
-    </div>
-    <div name="find-my-imei" class="pl-2">
+      <!-- <div name="find-my-imei" class="pl-2">
       <input
         v-model="searchKeyword"
         type="text"
         placeholder="Enter IMEI or SN..."
         class="flex flex-start p-2 mb-4"
       />
+    </div> -->
+    </div>
+    <div class="flex repair-info bg-white text-xs border-b-1 sticky top-0 z-10 pb-2">
+      <div
+        class="p-2 text-sm rounded cursor-pointer"
+        :style="{
+          backgroundColor: pageIndex === 0 ? '#b3b3b3' : '#ffffff',
+          fontWeight: pageIndex === 0 ? 'bold' : 'normal',
+        }"
+        @click="setPageIndex(0)"
+      >
+        21st Century
+      </div>
+      <div
+        class="p-2 text-sm rounded cursor-pointer"
+        :style="{
+          backgroundColor: pageIndex === 1 ? '#b3b3b3' : '#ffffff',
+          fontWeight: pageIndex === 1 ? 'bold' : 'normal',
+        }"
+        @click="setPageIndex(1)"
+      >
+        NZSunnyWay
+      </div>
     </div>
   </div>
-  <div>
+  <!-- API TEST -->
+  <!-- <div>
     {{ singleResult || 'Get Price' }}
-  </div>
+  </div> -->
+  <!-- <div>{{ bulkResults }}</div> -->
   <div class="grid grid-cols-3 gap-4 justify-center min-width-[1000px] repair-list">
-    <PriceList :devices="filteredDevices" />
+    <PriceList v-if="pageIndex === 0" :devices="filteredDevices" />
+    <PriceList v-else-if="pageIndex === 1" :devices="filteredDevices" />
   </div>
 </template>
 

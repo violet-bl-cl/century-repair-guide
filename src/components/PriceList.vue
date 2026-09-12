@@ -4,6 +4,7 @@ import SamsungIcon from '@/components/icons/SamsungIcon.vue'
 import { DeviceGroup } from '@/types/deviceGroup'
 import type { DeviceModel } from '@/types/repairGuide'
 import { CircleCheck, CircleX } from '@lucide/vue'
+import CenturyIcon from './icons/CenturyIcon.vue'
 // const allDevices = ref<DeviceModel[]>([...appleDevice, ...samsungDevice]);
 const props = defineProps<{
   devices: DeviceModel[]
@@ -65,14 +66,15 @@ const date = new Date()
       <div class="flex-end"></div>
     </div>
     <div
-      class="border-b-1"
+      class="border-b-1 flex flex-row justify-between"
       :style="{
         paddingTop: '15px !important',
         paddingBottom: '15px !important',
         marginBottom: '10px',
       }"
     >
-      Client Price | Sale Price
+      <div class="flex-start">Client Price | Sale Price</div>
+      <div class="flex-end"><CenturyIcon /></div>
     </div>
     <div>
       <div
@@ -88,7 +90,7 @@ const date = new Date()
           {{ repairOptions[index] }}:
           <div v-if="value?.retailPrice !== 0" class="flex flex-col justify-start">
             <span class="text-red-500 text-[8px]"
-              >CN:
+              >Code ID:
               <span class="text-[8px] text-[#000000]">
                 {{
                   value?.partId
@@ -99,7 +101,7 @@ const date = new Date()
             >
 
             <span class="text-blue-500 text-[8px]">
-              QU:
+              Quantity:
               <span class="text-[8px] text-[#000000]"
                 >x {{ value?.quantity !== 0 ? `${value?.quantity}` : `0` }}</span
               ></span
