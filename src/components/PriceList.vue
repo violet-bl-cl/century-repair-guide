@@ -55,7 +55,7 @@ const date = new Date()
           }}</span>
         </div>
         <div>
-          <span class="flex-start text-xs">Device Type:</span>
+          <span class="flex-start text-xs">Group: </span>
           <span class="flex-end text-xs">{{
             DeviceGroup[device.repairGuide.deviceType.group]
           }}</span>
@@ -64,7 +64,16 @@ const date = new Date()
 
       <div class="flex-end"></div>
     </div>
-    <div class="border-b-1">Client Price | Sale Price</div>
+    <div
+      class="border-b-1"
+      :style="{
+        paddingTop: '15px !important',
+        paddingBottom: '15px !important',
+        marginBottom: '10px',
+      }"
+    >
+      Client Price | Sale Price
+    </div>
     <div>
       <div
         v-for="(value, key, index) in device.repairGuide.repairType"
@@ -100,7 +109,9 @@ const date = new Date()
         <div v-if="value?.retailPrice !== 0" class="flex-end">
           <span class="text-gray-500 text-xs font-bold">
             <span class="inline-flex"
-              ><span class="inline flex text-[#000000] text-[12px]">Availability:</span>
+              ><span class="inline flex text-[#000000] text-[12px] font-extralight"
+                >Availability:</span
+              >
               <CircleCheck
                 v-if="value?.quantity !== 0"
                 :style="{ color: 'green', width: 10, height: 10, margin: 'auto !important' }" />

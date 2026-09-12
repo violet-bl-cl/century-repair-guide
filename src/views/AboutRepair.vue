@@ -1,9 +1,11 @@
 <script lang="ts" setup>
+import { getPrice, type PriceResult } from '@/api/partPriceApi.ts'
 import { appleDevice } from '@/data/appleDevice'
 import { oppoDevice } from '@/data/oppoDevice'
 import { samsungDevice } from '@/data/samsungDevice'
 import type { DeviceModel } from '@/types/repairGuide'
-import { computed, ref } from 'vue'
+import { TabletSmartphone } from '@lucide/vue'
+import { computed, onMounted, ref } from 'vue'
 import AppleIcon from './../components/icons/AppleIcon.vue'
 import PriceList from './../components/PriceList.vue'
 const allDevices = ref<DeviceModel[]>([...appleDevice, ...samsungDevice, ...oppoDevice])
@@ -32,6 +34,30 @@ const tabIndex = ref(0)
 const setTabIndex = (value: number) => {
   tabIndex.value = value
 }
+
+//get api here
+// --- Single lookup ---
+const singleUrl = ref('https://nzsunnyway.co.nz/product/lcd-screen-samsung-a30s/')
+const singleLoading = ref(false)
+const singleError = ref<string | null>(null)
+const singleResult = ref<PriceResult | null>(null)
+
+async function handleSingleLookup() {
+  singleLoading.value = true
+  singleError.value = null
+  singleResult.value = null
+
+  try {
+    singleResult.value = await getPrice(singleUrl.value)
+  } catch (e: any) {
+    singleError.value = e.response?.data?.message || e.message
+  } finally {
+    singleLoading.value = false
+  }
+}
+onMounted(() => {
+  handleSingleLookup()
+})
 </script>
 <template>
   <div class="flex repair-info text-xs border-b-1 bg-[#000000] text-white">
@@ -51,29 +77,29 @@ const setTabIndex = (value: number) => {
     </div>
     <div class="flex-end flex gap-0.5">
       <div
-        :style="{ backgroundColor: tabIndex === 0 ? '#4c4c4c' : '#ffffff' }"
-        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center items-center cursor-pointer select-none"
+        :style="{ backgroundColor: tabIndex === 0 ? '#b3b3b3' : '#ffffff' }"
+        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
         @click="setTabIndex(0)"
       >
-        All
+        <TabletSmartphone :style="{ color: 'black' }" />
       </div>
       <div
-        :style="{ backgroundColor: tabIndex === 1 ? '#4c4c4c' : '#ffffff' }"
-        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center items-center cursor-pointer select-none"
+        :style="{ backgroundColor: tabIndex === 1 ? '#b3b3b3' : '#ffffff' }"
+        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
         @click="setTabIndex(1)"
       >
         <AppleIcon />
       </div>
       <div
-        :style="{ backgroundColor: tabIndex === 2 ? '#4c4c4c' : '#ffffff' }"
-        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center items-center cursor-pointer select-none"
+        :style="{ backgroundColor: tabIndex === 2 ? '#b3b3b3' : '#ffffff' }"
+        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
         @click="setTabIndex(2)"
       >
         <SamsungIcon />
       </div>
       <div
-        :style="{ backgroundColor: tabIndex === 3 ? '#4c4c4c' : '#ffffff' }"
-        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center items-center cursor-pointer select-none"
+        :style="{ backgroundColor: tabIndex === 3 ? '#b3b3b3' : '#ffffff' }"
+        class="bg-[#ffffff] hover:bg-[#4c4c4c] w-10 h-10 flex justify-center rounded items-center cursor-pointer select-none"
         @click="setTabIndex(3)"
       >
         <OppoIcon />
@@ -88,7 +114,9 @@ const setTabIndex = (value: number) => {
       />
     </div>
   </div>
-
+  <div>
+    {{ singleResult || 'Get Price' }}
+  </div>
   <div class="grid grid-cols-3 gap-4 justify-center min-width-[1000px] repair-list">
     <PriceList :devices="filteredDevices" />
   </div>

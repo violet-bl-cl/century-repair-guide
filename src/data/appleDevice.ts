@@ -10,7 +10,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 6/6s',
         year: 2014,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(75),
@@ -31,7 +31,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 6 Plus / 6s Plus',
         year: 2014,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(90),
@@ -52,7 +52,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 7',
         year: 2016,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(80),
@@ -73,7 +73,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 7 Plus',
         year: 2016,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(90),
@@ -94,7 +94,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 8',
         year: 2017,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(90),
@@ -115,7 +115,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 8 Plus',
         year: 2017,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(90),
@@ -136,7 +136,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone X',
         year: 2017,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(99),
@@ -157,7 +157,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone XS',
         year: 2018,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(99),
@@ -178,7 +178,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone XR',
         year: 2018,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(99),
@@ -199,7 +199,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone XS Max',
         year: 2018,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(120),
@@ -220,7 +220,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 11',
         year: 2019,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(99),
@@ -241,7 +241,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 11 Pro',
         year: 2019,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(100),
@@ -262,7 +262,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 11 Pro Max',
         year: 2019,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(120),
@@ -283,7 +283,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 12',
         year: 2020,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(120),
@@ -304,7 +304,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 12 Pro',
         year: 2020,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(120),
@@ -325,7 +325,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 12 Mini',
         year: 2020,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(120),
@@ -346,7 +346,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 12 Pro Max',
         year: 2020,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(160),
@@ -367,7 +367,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 13 Mini',
         year: 2021,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(0),
@@ -388,7 +388,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 13',
         year: 2021,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(120),
@@ -409,7 +409,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 13 Pro',
         year: 2021,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(150),
@@ -430,7 +430,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 13 Pro Max',
         year: 2021,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(190, 'Alternative option available: 390'),
@@ -452,7 +452,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 14',
         year: 2022,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(140),
@@ -473,7 +473,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 14 Plus',
         year: 2022,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(160),
@@ -494,7 +494,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 14 Pro',
         year: 2022,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(180),
@@ -515,7 +515,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 14 Pro Max',
         year: 2022,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(190),
@@ -536,7 +536,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 15',
         year: 2023,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(160),
@@ -557,7 +557,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 15 Plus',
         year: 2023,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(160, 'Alternative option available: 260'),
@@ -579,7 +579,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 15 Pro',
         year: 2023,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(180, 'Alternative option available: 750'),
@@ -601,7 +601,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 15 Pro Max',
         year: 2023,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(220),
@@ -622,7 +622,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 16E',
         year: 2024,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(150),
@@ -643,7 +643,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 16',
         year: 2024,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(180, 'Alternative option available: 250'),
@@ -665,7 +665,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 16 Plus',
         year: 2024,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(220, 'Alternative option available: 280'),
@@ -687,7 +687,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 16 Pro',
         year: 2024,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(220, 'Alternative option available: 280'),
@@ -709,7 +709,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 16 Pro Max',
         year: 2024,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(260),
@@ -730,7 +730,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 17',
         year: 2025,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(0),
@@ -751,7 +751,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 17 Pro',
         year: 2025,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(0),
@@ -772,7 +772,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 17 Plus',
         year: 2025,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(0),
@@ -793,7 +793,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 17 Pro Max',
         year: 2025,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(0),
@@ -814,7 +814,7 @@ export const appleDevice: DeviceModel[] = [
         model: 'iPhone 17 Air',
         year: 2025,
         brand: 'Apple',
-        group: DeviceGroup.None,
+        group: DeviceGroup.Mobile,
       },
       repairType: {
         lcdScreen: createRepairDetail(0),
